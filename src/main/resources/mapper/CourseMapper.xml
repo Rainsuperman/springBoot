@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+        <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+                "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hand.demo.mapper.CourseMapper">
+        <select id="queryAllCourses"  resultType="com.hand.demo.entity.Course">
+                select * from course;
+        </select>
+        <insert id="insertCourse" parameterType="com.hand.demo.entity.Course">
+                INSERT INTO course(course_id,course_number,course_name)
+                VALUES (#{courseId},#{courseNumber},#{courseName})
+        </insert>
+
+        <update id="updateCourse" parameterType="com.hand.demo.entity.Course">
+                UPDATE course
+                <set>
+                        <if test="courseId!=null">course_id=#{courseId}</if>
+                        <if test="courseNumber!=null">course_number=#{courseNumber}</if>
+                        <if test="courseName!=null">course_name=#{courseName}</if>
+                </set>
+                WHERE course_id=#{courseId}
+        </update>
+
+        <delete id="deleteCourse" parameterType="int">
+                DELETE FROM course
+                WHERE course_id=courseId
+        </delete>
+</mapper>

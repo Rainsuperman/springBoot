@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hand.demo.mapper.StudentMapper">
+    <insert id="insertStudent" parameterType="com.hand.demo.entity.Student">
+        INSERT INTO student(student_id,student_number,student_name,student_age)
+        VALUES (#{studentId},#{studentNumber},#{studentName},#{studentAge})
+    </insert>
+
+    <update id="updateStudent" parameterType="com.hand.demo.entity.Student">
+        UPDATE student
+        <set>
+            <if test="studentId!=null">student_id=studentId</if>
+            <if test="studentNumber!=null">student_number=studentNumber</if>
+            <if test="studentName!=null">student_name=studentName</if>
+            <if test="studentAge!=null">student_age=studentAge</if>
+        </set>
+        WHERE student_id=#{studentId}
+    </update>
+
+    <delete id="deleteStudent" parameterType="int">
+        DELETE FROM student
+        WHERE student_id=#{studentId}
+    </delete>
+</mapper>

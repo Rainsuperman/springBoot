@@ -64,5 +64,9 @@ public class CourseController {
     public int deleteStudent(@PathVariable(value = "id") int id){
         return courseService.deleteCourse(id);
     }
+
+    public void print(){
+        System.out.println("flsjadk");
+    }
 }
 

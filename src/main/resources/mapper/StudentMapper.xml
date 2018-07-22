@@ -10,10 +10,10 @@
     <update id="updateStudent" parameterType="com.hand.demo.entity.Student">
         UPDATE student
         <set>
-            <if test="studentId!=null">student_id=studentId</if>
-            <if test="studentNumber!=null">student_number=studentNumber</if>
-            <if test="studentName!=null">student_name=studentName</if>
-            <if test="studentAge!=null">student_age=studentAge</if>
+            <if test="studentId!=null">student_id=#{studentId},</if>
+            <if test="studentNumber!=null">student_number=#{studentNumber},</if>
+            <if test="studentName!=null">student_name=#{studentName},</if>
+            <if test="studentAge!=null">student_age=#{studentAge}</if>
         </set>
         WHERE student_id=#{studentId}
     </update>

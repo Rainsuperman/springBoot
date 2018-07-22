@@ -39,10 +39,10 @@ public class TeacherController {
      * @return
      */
     @PostMapping(value = "/teacher")
-    public int  addTeacher(@RequestParam(value = "teacherNumber") int teacherNumber,
+    public int  addTeacher(@RequestParam(value = "teacherNumber") String teacherNumber,
                             @RequestParam(value = "teacherName") String teacherName,
                             @RequestParam(value="teacherAge") int teacherAge,
-                            @RequestParam(value = "courseNumber") int courseNumber){
+                            @RequestParam(value = "courseNumber") String courseNumber){
         Teacher teacher = new Teacher();
         teacher.setCourseNumber(teacherNumber);
         teacher.setTeacherName(teacherName);
@@ -62,10 +62,10 @@ public class TeacherController {
      */
     @PutMapping(value = "/teacher")
     public int updateTeacher(@RequestParam(value = "teacherId") int teacherId,
-                              @RequestParam(value = "teacherNumber") int teacherNumber,
+                              @RequestParam(value = "teacherNumber") String teacherNumber,
                               @RequestParam(value = "teacherName") String teacherName,
                               @RequestParam(value="teacherAge") int teacherAge,
-                              @RequestParam(value = "courseNumber") int courseNumber){
+                              @RequestParam(value = "courseNumber") String courseNumber){
         Teacher teacher = new Teacher();
         teacher.setTeacherId(teacherId);
         teacher.setCourseNumber(teacherNumber);

@@ -2,10 +2,10 @@ package com.hand.demo.entity;
 
 public class Teacher {
     private int teacherId;
-    private int teacherNumber;
+    private String teacherNumber;
     private String teacherName;
     private int teacherAge;
-    private int courseNumber;
+    private String courseNumber;
 
     public int getTeacherId() {
         return teacherId;
@@ -15,11 +15,11 @@ public class Teacher {
         this.teacherId = teacherId;
     }
 
-    public int getTeacherNumber() {
+    public String getTeacherNumber() {
         return teacherNumber;
     }
 
-    public void setTeacherNumber(int teacherNumber) {
+    public void setTeacherNumber(String teacherNumber) {
         this.teacherNumber = teacherNumber;
     }
 
@@ -35,15 +35,15 @@ public class Teacher {
         return teacherAge;
     }
 
-    public void setTeacherAge(int age) {
-        this.teacherAge = age;
+    public void setTeacherAge(int teacherAge) {
+        this.teacherAge = teacherAge;
     }
 
-    public int getCourseNumber() {
+    public String getCourseNumber() {
         return courseNumber;
     }
 
-    public void setCourseNumber(int courseNumber) {
+    public void setCourseNumber(String courseNumber) {
         this.courseNumber = courseNumber;
     }
 }

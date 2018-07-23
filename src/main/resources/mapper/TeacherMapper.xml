@@ -18,7 +18,7 @@
             <if test="teacherNumber!=null>">teacher_number=#{teacherNumber}</if>
             <if test="teacherName!=null"> teacher_name=#{teacherName},</if>
             <if test="teacherAge!=null"> teacher_age=#{teacherAge},</if>
-            <if test="courseNumber!=null"> course_number=#{courseNumber},</if>
+            <if test="courseNumber!=null"> course_number=#{courseNumber}</if>
         </set>
         WHERE teacher_id=#{teacherId}
     </update>

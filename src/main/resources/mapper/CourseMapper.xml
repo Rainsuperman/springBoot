@@ -13,8 +13,8 @@
         <update id="updateCourse" parameterType="com.hand.demo.entity.Course">
                 UPDATE course
                 <set>
-                        <if test="courseId!=null">course_id=#{courseId}</if>
-                        <if test="courseNumber!=null">course_number=#{courseNumber}</if>
+                        <if test="courseId!=null">course_id=#{courseId},</if>
+                        <if test="courseNumber!=null">course_number=#{courseNumber},</if>
                         <if test="courseName!=null">course_name=#{courseName}</if>
                 </set>
                 WHERE course_id=#{courseId}

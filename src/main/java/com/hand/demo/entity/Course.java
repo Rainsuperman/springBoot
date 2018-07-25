@@ -1,5 +1,8 @@
 package com.hand.demo.entity;
 
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+
+
 public class Course {
     private int courseId;
     private int courseNumber;

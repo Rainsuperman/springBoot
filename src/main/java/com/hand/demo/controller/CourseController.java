@@ -14,6 +14,10 @@ public class CourseController {
     @Resource
     private CourseService courseService;
 
+    /**
+     * 查询所有课程
+     * @return
+     */
     @GetMapping(value = "/course")
     public List<Course> queryAllCourses(){
         return courseService.queryAllCourses();
